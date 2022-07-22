@@ -6,6 +6,8 @@ import { resolveProperties } from "ethers/lib/utils.js";
 const database = process.env.DATABASE;
 const collection = process.env.COLLECTION;
 
+
+//convert dates for comparison when we filter the data
 const convertDate = (obj) => {
   const { date } = obj;
   const iso = date.toISOString();
@@ -25,7 +27,7 @@ const getTwapHistory = async (req, res) => {
     const db = client.db(database);
 
     const to = DateTime.now();
-    const from = to.minus({ days: 28 });
+    const from = to.minus({ days: days });
 
     const twapHistory = await db.collection('twap-history')
       .find({
