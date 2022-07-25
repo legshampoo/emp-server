@@ -4,7 +4,8 @@ import { DateTime } from 'luxon';
 import { resolveProperties } from "ethers/lib/utils.js";
 
 const database = process.env.DATABASE;
-const collection = process.env.COLLECTION;
+// const collection = process.env.COLLECTION;
+const collection = 'twap-history-test';  //twap-history
 
 
 //convert dates for comparison when we filter the data
@@ -29,7 +30,7 @@ const getTwapHistory = async (req, res) => {
     const to = DateTime.now();
     const from = to.minus({ days: days });
 
-    const twapHistory = await db.collection('twap-history')
+    const twapHistory = await db.collection(collection)
       .find({
         'date': {
           $gte: from,
