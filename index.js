@@ -10,7 +10,7 @@ app.use(cors());
 
 app.get('/api/twap-history', getTwapHistory);
 
-app.listen(process.env.PORT, () => {
-  console.log(`EMP server listining on port ${process.env.PORT}`)
+app.listen(process.env.PORT || 3000, () => {
+  console.log(`EMP server is running...`)
   init();
 })
