@@ -65,6 +65,7 @@ const getTwapHistory = async (req, res) => {
 
     const downSampledHistory = sortedHistory.filter((el, i) => {
       let n = (sortedHistory.length + 1) / samples;
+      n = Math.ceil(n);
       const result = (i + 1) % n;
 
       if(i === 0){
