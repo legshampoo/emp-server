@@ -5,7 +5,9 @@ import { resolveProperties } from "ethers/lib/utils.js";
 
 const database = process.env.DATABASE;
 // const collection = process.env.COLLECTION;
-const collection = 'twap-history-test';  //twap-history
+
+// const collection = 'twap-history'; 
+const collection = 'twap-history-test'; 
 
 
 //convert dates for comparison when we filter the data
