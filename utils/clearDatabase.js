@@ -1,6 +1,6 @@
 import clientPromise from "../lib/mongodb.js";
 
-const database = 'emp-money';
+const database = 'emp-money-delete';
 const collection = 'twap-history';
 
 const clearDatabase = async () => {
