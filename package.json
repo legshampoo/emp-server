@@ -6,8 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon index.js",
-    "prod": "node index.js",
-    "pm2": "pm2 start index.js",
+    "start": "node index.js",
+    "prod": "pm2-runtime start ecosystem.config.js --env production",
     "clear-database": "node ./utils/clearDatabase.js",
     "rename-collection": "node ./utils/renameCollection.js"
   },

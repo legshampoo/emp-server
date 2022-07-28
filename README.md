@@ -6,4 +6,4 @@ https://empmoney-server.herokuapp.com/ | https://git.heroku.com/empmoney-server.
 git push heroku main
 
 
-ok
+web: node index.js
