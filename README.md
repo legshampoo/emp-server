@@ -7,3 +7,6 @@ git push heroku main
 
 
 web: node index.js
+
+dextools
+https://dexscreener.com/bsc/0x84821bb588f049913dc579dc511e5e31eb22d5e4
